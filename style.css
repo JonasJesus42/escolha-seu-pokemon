@@ -1,16 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 header{
-    margin: auto;
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+body{
+    background-color: #b4d5bd;
+}
+div{
+    max-width: 1000px;
+}
+header, div{
+    display: flex;
+    margin: auto;
+}
+img{
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+}
+button{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 h1{
     font-family: 'Roboto', sans-serif;
@@ -18,28 +36,33 @@ h1{
     font-size: 3rem;
     text-shadow: 0.05em 0.05em 0.2em black
 }
-body{
-    background-color: #b4d5bd;
+h2{
+    margin: 5px;
 }
-div{
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
+h3{
+    color: black;
+    margin-bottom: 10px;
 }
-img{
-    margin: auto;
-    width: 50%;
-    max-width: 500px;
+h2, h3{
+    font-family: monospace;
 }
 .componente{
-    width: 300px;
-    height: 50px;
-    border-radius: 20px;
     margin: 20px;
     overflow: hidden;
     background-color: azure;
-    cursor: pointer;
     text-align: center;
+}
+.card{
+    cursor: pointer;
+    display: block;
+    margin:  auto;
+    max-width: 100%;
+    padding-top: 50px;
+}
+.componente, .card{
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;   
 }
 .mostrar{
    transition: 1s;
@@ -48,26 +71,6 @@ img{
 .esconder{
     transition: 1s;
     height: 300px;
-}
-
-h3{
-    color: black;
-    margin-bottom: 10px;
-    font-family: monospace;
-}
-h2{
-    font-family: monospace;
-    margin: 5px;
-}
-
-.card{
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    display: block;
-    margin:  auto;
-    max-width: 100%;
-    padding-top: 50px;
 }
 #squirtle{
     background-color: #f2e100;
@@ -87,7 +90,6 @@ h2{
 #squirbtn{
     background-color: #84cabf;
 }
-
 .expandir{
     transition: 2s;
     top: 0;
@@ -99,15 +101,6 @@ h2{
     height: 100%;
     border-radius: 0;
 }
-
-
-button{
-    width: 80px;
-    height: 30px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
 @media (max-width: 600px){
    div{
        display: flex;
