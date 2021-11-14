@@ -1,10 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+header{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    color: antiquewhite;
+    font-size: 3rem;
+    text-shadow: 0.05em 0.05em 0.2em black
+}
 body{
-    background-color: rgb(111, 209, 204);
+    background-color: #b4d5bd;
 }
 div{
     max-width: 1000px;
@@ -13,7 +28,8 @@ div{
 }
 img{
     margin: auto;
-    width: 60%;
+    width: 50%;
+    max-width: 500px;
 }
 .componente{
     width: 300px;
@@ -27,19 +43,13 @@ img{
 }
 .mostrar{
    transition: 1s;
-   height: 470px;
+   height: 480px;
 }
 .esconder{
     transition: 1s;
     height: 300px;
 }
-.dadosEscondidos{
-    transition: 2s;
-    opacity: 0;
-}
-.dadosMostra{
-    opacity: 1;
-}
+
 h3{
     color: black;
     margin-bottom: 10px;
@@ -50,13 +60,14 @@ h2{
     margin: 5px;
 }
 
-#squirtle, #bulbasours, #charmander{
+.card{
     width: 300px;
     height: 300px;
     border-radius: 20px;
     display: block;
     margin:  auto;
     max-width: 100%;
+    padding-top: 50px;
 }
 #squirtle{
     background-color: #f2e100;
@@ -67,14 +78,34 @@ h2{
 #charmander{
     background-color: #ef8200;
 }
+#bulbabtn{
+    background-color: #68ae28;
+}
+#charbtn{
+    background-color: #e50020;
+}
+#squirbtn{
+    background-color: #84cabf;
+}
+
+.expandir{
+    transition: 2s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
 
 
 button{
     width: 80px;
-    height: 20px;
+    height: 30px;
     border-radius: 5px;
     margin-bottom: 5px;
-    background-color: #84cabf;
 }
 
 @media (max-width: 600px){

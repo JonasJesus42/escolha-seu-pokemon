@@ -1,32 +1,22 @@
-const sqrirel = document.getElementById("compSquirtle")
-const bulba = document.getElementById("compBulbasours")
-const char = document.getElementById('compCharmander')
-const dados = document.getElementById('dados')
+const btn = document.getElementsByTagName('button')
+const cardPokemon = document.getElementsByClassName('card')
+let pokemon = document.getElementsByClassName('componente')
+let aperto = false
 
-sqrirel.addEventListener("click", () =>{
-   if( sqrirel.classList.contains("esconder")){
-       sqrirel.classList.remove('esconder')
-       sqrirel.classList.add('mostrar')
-   }else{
-    sqrirel.classList.remove('mostrar')
-    sqrirel.classList.add('esconder')
-   }
-})
-bulba.addEventListener("click", () =>{
-    if( bulba.classList.contains("esconder")){
-        bulba.classList.remove('esconder')
-        bulba.classList.add('mostrar')
-    }else{
-     bulba.classList.remove('mostar')
-     bulba.classList.add('esconder')
-    }
- })
- char.addEventListener("click", () =>{
-    if( char.classList.contains("esconder")){
-        char.classList.remove('esconder')
-        char.classList.add('mostrar')
-    }else{
-     char.classList.remove('mostar')
-     char.classList.add('esconder')
-    }
- })
+for(let i =0; i < pokemon.length; i++){
+    pokemon[i].addEventListener("click", () =>{
+        if( pokemon[i].classList.contains("esconder")){
+            pokemon[i].classList.remove('esconder')
+            pokemon[i].classList.add('mostrar')
+        }else{
+            pokemon[i].classList.remove('mostrar')
+            pokemon[i].classList.add('esconder')
+        }    
+    })   
+}
+
+for(let i =0; i < cardPokemon.length; i++){
+    btn[i].addEventListener("click", () =>{
+            cardPokemon[i].classList.add('expandir')
+    })
+}
